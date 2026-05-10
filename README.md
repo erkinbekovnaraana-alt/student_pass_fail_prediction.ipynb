@@ -1,135 +1,100 @@
-# Pass/Fail Prediction — Logistic Regression Classification Model
+# Pass/Fail Prediction — Logistic Regression Model
 
-## Overview
-
-This project implements a logistic regression model to predict whether a student will pass or fail an exam based on the number of hours studied.
-
-The goal is to demonstrate how classification algorithms can model probabilities and decision boundaries in binary outcomes.
+## Overview  
+This project applies classification techniques to predict whether a student will pass or fail an exam based on study time.  
+It demonstrates a core machine learning concept: probability-based decision making using Logistic Regression.
 
 ---
 
-## Problem Statement
-
-Academic success is often influenced by study habits. This project aims to answer:
-
-* Can we predict whether a student will pass an exam based on study time?
-* How does study time influence the probability of passing?
+## Problem Statement  
+Understanding the threshold at which study effort leads to success is critical for improving academic outcomes.  
+This project models how study time influences the probability of passing an exam.
 
 ---
 
-## Data
-
-A dataset was constructed with the following variables:
-
-* `hours_studied`: number of hours spent studying
-* `passed`: binary outcome (0 = fail, 1 = pass)
-
-The dataset contains 8 observations representing increasing study time and corresponding outcomes.
+## Objective  
+- Build a classification model to predict pass/fail outcomes  
+- Estimate how study time affects success probability  
 
 ---
 
-## Methodology
+## Dataset  
 
-### Data Preparation
-
-* Data was structured using a Pandas DataFrame
-* Feature (`hours_studied`) and target (`passed`) variables were separated
-
----
-
-### Model
-
-A Logistic Regression model was used to:
-
-* estimate the probability of passing
-* classify outcomes into pass (1) or fail (0)
+- Synthetic dataset representing student study behavior  
+- Variables:  
+  - hours_studied — number of hours spent studying  
+  - passed — exam result (0 = fail, 1 = pass)  
 
 ---
 
-### Training
+## Methodology  
 
-The model was trained on the dataset to learn the relationship between study time and exam outcome.
+### Data Preparation  
+- Structured dataset using Pandas  
+- Defined feature (study time) and target (pass/fail outcome)  
 
----
+### Model Development  
+- Applied **Logistic Regression** from Scikit-learn  
+- Trained model to learn probability of passing based on study hours  
 
-### Prediction
-
-Predictions were made for new inputs:
-
-```id="x1y2z3"
-Prediction for 3 hours: 0
-Prediction for 6 hours: 1
-```
-
-This indicates that lower study time is associated with failing, while higher study time increases the likelihood of passing.
-
----
-
-### Visualization
-
-A scatter plot was created to show:
-
-* study hours (x-axis)
-* pass/fail outcome (y-axis)
-
-This helps illustrate the classification boundary learned by the model.
+### Prediction & Visualization  
+- Predicted outcomes for new inputs:  
+  - 3 hours → Fail (0)  
+  - 6 hours → Pass (1)  
+- Visualized data distribution using Matplotlib  
 
 ---
 
-## Results
+## Results  
 
-The model captures a clear relationship between study time and exam success:
-
-* Students with fewer study hours are more likely to fail
-* Students with more study hours are more likely to pass
+- Model successfully distinguishes between pass and fail outcomes  
+- Identifies a threshold where increased study time significantly raises probability of passing  
 
 ---
 
-## Key Insights
+## Key Insights  
 
-* Logistic regression is effective for binary classification problems
-* Study time has a strong influence on passing probability
-* The model learns a decision boundary separating pass and fail outcomes
-
----
-
-## Limitations
-
-* Small dataset size
-* Synthetic data does not reflect real-world variability
-* Only one feature is considered
+- Study time strongly influences the likelihood of passing  
+- Logistic Regression effectively models binary outcomes  
+- Small increases in study time can shift outcomes from failure to success  
 
 ---
 
-## Future Improvements
+## Limitations  
 
-* Use real-world educational datasets
-* Add more features (e.g., attendance, prior grades, sleep patterns)
-* Evaluate performance using metrics (accuracy, precision, recall)
-* Visualize probability curve (sigmoid function)
-
----
-
-## Tech Stack
-
-* Python
-* Pandas
-* Scikit-learn
-* Matplotlib
+- Synthetic dataset (not real-world data)  
+- Small sample size  
+- Limited feature set (only study time considered)  
 
 ---
 
-## Repository Structure
+## Future Improvements  
 
-```id="m4n5o6"
-pass-fail-prediction/
-│
-├── notebook.ipynb
-├── README.md
-```
+- Use real-world student performance data  
+- Add more features (sleep, focus, prior knowledge)  
+- Evaluate model performance (accuracy, precision, recall)  
+- Visualize probability curve (sigmoid function)  
 
 ---
 
-## Author
+## Tech Stack  
 
-Independent project demonstrating foundational skills in classification models and data analysis.
+- Python  
+- Pandas  
+- Scikit-learn  
+- Matplotlib  
+
+---
+
+## Project Value  
+
+This project demonstrates the ability to:  
+- Build classification models  
+- Interpret probability-based predictions  
+- Apply machine learning to decision-making problems  
+
+---
+
+## Author  
+
+Data Science & Machine Learning student focused on predictive modeling and real-world applications
